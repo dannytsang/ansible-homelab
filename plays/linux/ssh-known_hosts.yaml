@@ -1,5 +1,6 @@
 # https://stackoverflow.com/questions/30226113/ansible-ssh-prompt-known-hosts-issue
 - name: Store known hosts of 'all' the hosts in the inventory file
+  become: yes
   hosts: localhost
   connection: local
 
