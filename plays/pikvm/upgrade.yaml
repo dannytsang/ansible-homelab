@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  become_user: root
+  tasks:
+    - name: Run the equivalent of "pacman -Syu" as a separate step
+      # https://docs.ansible.com/ansible/latest/collections/community/general/pacman_module.html#examples
+      community.general.pacman:
+        update_cache: true
+        upgrade: true
